@@ -1,6 +1,8 @@
 package ru.javawebinar.topjava.model;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class MealTo {
     private final LocalDateTime dateTime;
@@ -23,6 +25,31 @@ public class MealTo {
 //    public Boolean getExcess() {
 //        return excess.get();
 //    }
+
+
+    public LocalDate getStringDate() {
+        return dateTime.toLocalDate();
+    }
+
+    public LocalTime getStringTime() {
+        return dateTime.toLocalTime();
+    }
+
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public boolean isExcess() {
+        return excess;
+    }
 
     @Override
     public String toString() {
